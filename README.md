@@ -1,6 +1,6 @@
 # Cryptmoji
 
-A simple emoji-based encryption algorithm.
+A simple emoji-based encryption-decryption library.
 _______________________
 
 ## Installation
