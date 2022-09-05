@@ -59,4 +59,4 @@ Pipfile.lock
 __pypackages__/
 
 # VisualStudioCode ###
-.vscode/*
+.vscode
