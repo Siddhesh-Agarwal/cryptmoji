@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "cryptmoji"
-version = "0.2.0"
+version = "1.0.0"
 description = "Encrypt Text using emojis!"
 authors = ["Siddhesh Agarwal <siddhesh.agarwal@gmail.com>"]
-license = "MIT"
+license = "MIT License"
 readme = "README.md"
 repository = "https://github.com/Siddhesh-Agarwal/cryptmoji"
 keywords = ["encryption", "emoji", "cipher"]
@@ -25,7 +25,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.6"
+python = "^3.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

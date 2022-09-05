@@ -1,4 +1,4 @@
-from data import LENGTH, emojis
+from cryptmoji.data import LENGTH, emojis
 
 
 class Cryptmoji:
@@ -59,12 +59,3 @@ class Cryptmoji:
             decrypted = [emojis_2_int[i] for i in range(len(emojis_2_int))]
         self.text = [chr(i) for i in decrypted]
         return "".join(self.text)
-
-
-if __name__ == "__main__":
-    text = "Hello World!"
-    key = "random_key"
-    a = Cryptmoji(text, key)
-    encrypted = a.encrypt()
-    print(encrypted)
-    print(a.decrypt())
