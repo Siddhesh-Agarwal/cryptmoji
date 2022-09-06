@@ -4,7 +4,7 @@ from hashlib import sha512
 
 class Cryptmoji:
     def __init__(self, text: str, key: str = None):
-        self.text = [i for i in text]
+        self.text = list(text)
         self.key = sha512(str(key))
         self.key_len = len(key)
 
