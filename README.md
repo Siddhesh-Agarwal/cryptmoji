@@ -1,9 +1,9 @@
-# Cryptmoji
+# 🐱‍👤 Cryptmoji
 
 A simple emoji-based encryption-decryption library.
 _______________________
 
-## Installation
+## 📥 Installation
 
 pip install the library:
 
@@ -11,7 +11,7 @@ pip install the library:
 pip install cryptmoji
 ```
 
-## Usage
+## 📝 Usage
 
 ```python
 from cryptmoji import Cryptmoji
