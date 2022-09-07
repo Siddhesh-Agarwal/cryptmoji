@@ -20,13 +20,13 @@ text = "Hello World!"
 key = "random_key" # makes the encryption stronger (optional)
 
 a = Cryptmoji(text, key=key)
-encrypted = a.encrypt()
 # The encrypt and decrypt functions return the value
+encrypted = a.encrypt()
 print(encrypted)
 # 🎚️🎨🎼🎲🏀🍯🎓🎼🎹🏂🎸🍤
 
+# The encrypt and decrypt functions change the value in-place too
 a.decrypt() 
-# The encrypt and decrypt functions change the value in-place
 print(decrypted)
 # Hello World!
 ```
