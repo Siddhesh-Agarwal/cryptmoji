@@ -36,10 +36,11 @@ print(decrypted)
 
 _______________________
 
-## `Cryptmoji`
+## cryptmoji.Cryptmoji
 
-### `encrypt()`
-### `decrypt()`
+### encrypt()
+
+### decrypt()
 
 _______________________
 
