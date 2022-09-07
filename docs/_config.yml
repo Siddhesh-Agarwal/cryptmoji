@@ -1,3 +1,5 @@
-theme: jekyll-theme-minimal
-title: Cryptmoji Official Docs
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme
+title: Documentation
 description: A simple emoji-based encryption-decryption library!
