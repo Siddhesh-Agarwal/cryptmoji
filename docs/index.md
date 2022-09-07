@@ -11,6 +11,8 @@ pip install the library:
 pip install cryptmoji
 ```
 
+_______________________
+
 ## 📝 Usage
 
 ```python
@@ -30,3 +32,14 @@ a.decrypt()
 print(decrypted)
 # Hello World!
 ```
+
+_______________________
+
+## `Cryptmoji`
+
+### `encrypt()`
+### `decrypt()`
+
+_______________________
+
+## `data`
