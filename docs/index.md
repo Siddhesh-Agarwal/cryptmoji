@@ -43,4 +43,8 @@ _______________________
 
 _______________________
 
-## `data`
+## cryptmoji.data
+
+`cryptmoji.data` contains 2 variables i.e. `emojis` and `LENGTH`. 
+1. `emojis` is a list of emojis that are possible `cryptmoji` to generate.
+2. `LENGTH` is `len(emojis)`.
