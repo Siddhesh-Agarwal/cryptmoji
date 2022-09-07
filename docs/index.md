@@ -8,7 +8,7 @@ _______________________
 
 pip install the library:
 
-```sh
+```bash
 pip install cryptmoji
 ```
 
@@ -46,14 +46,41 @@ __init__(self, text: str, key: str = None)
 
 The class constructor takes in a compulsory parameter i.e. the text to encrypt/decrypt. It also takes in an optional parameter (i.e. `key`) to increase the complexity of the encryption.
 
+```
+from cryptmoji import Cryptmoji
+
+tool = Cryptmoji(temp)
+```
+
 ### encrypt()
+
+Encryption can be done using:
+
+```python
+tool.encrypt()
+print(tool)
+```
+
+apart from inplace encryption, the values are also returned.
+
+```python
+encrypted = tool.decrypt()
+print(encrypted)
+```
 
 ### decrypt()
 
-_______________________
+Decryption can be done using:
 
-## cryptmoji.data
+```python
+tool.decrypt()
+print(tool)
+```
 
-`cryptmoji.data` contains 2 variables i.e. `emojis` and `LENGTH`. 
-1. `emojis` is a list of emojis that are possible `cryptmoji` to generate.
-2. `LENGTH` is `len(emojis)`.
+apart from inplace decryption, the values are also returned.
+
+```python
+decrypted = tool.decrypt()
+print(decrypted)
+```
+
