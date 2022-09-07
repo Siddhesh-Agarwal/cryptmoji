@@ -38,6 +38,14 @@ _______________________
 
 ## cryptmoji.Cryptmoji
 
+This is a class and its constructor is as follows:
+
+```python
+__init__(self, text: str, key: str = None)
+```
+
+The class constructor takes in a compulsory parameter i.e. the text to encrypt/decrypt. It also takes in an optional parameter (i.e. `key`) to increase the complexity of the encryption.
+
 ### encrypt()
 
 ### decrypt()
