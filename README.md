@@ -14,19 +14,18 @@ pip install cryptmoji
 ## 📝 Usage
 
 ```python
-from cryptmoji import Cryptmoji
+from cryptmoji import encrypt, decrypt
 
-text = "Hello World!"
+text = "Hello, world!"
 key = "random_key" # makes the encryption stronger (optional)
 
-a = Cryptmoji(text, key=key)
 # The encrypt and decrypt functions return the value
-encrypted = a.encrypt()
+encrypted = encrypt(text, key)
 print(encrypted)
-# 🎚️🎨🎼🎲🏀🍯🎓🎼🎹🏂🎸🍤
+# '🎽🏉🏭🏣🏴🎐🍵🐀🏧🐉🏴🏈🎆'
 
 # The encrypt and decrypt functions change the value in-place too
-a.decrypt() 
+decrypted = decrypt(encrypted, key)
 print(decrypted)
-# Hello World!
+# 'Hello, world!'
 ```
