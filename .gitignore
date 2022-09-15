@@ -63,3 +63,6 @@ __pypackages__/
 
 # VisualStudioCode ###
 .vscode
+
+# enviroment
+env
