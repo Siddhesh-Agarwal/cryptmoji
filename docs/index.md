@@ -17,70 +17,72 @@ _______________________
 ## 📝 Usage
 
 ```python
-from cryptmoji import Cryptmoji
+from cryptmoji import encrypt, decrypt
 
-text = "Hello World!"
+text = "Hello, world!"
 key = "random_key" # makes the encryption stronger (optional)
 
-a = Cryptmoji(text, key=key)
 # The encrypt and decrypt functions return the value
-encrypted = a.encrypt()
+encrypted = encrypt(text, key)
 print(encrypted)
-# 🎚️🎨🎼🎲🏀🍯🎓🎼🎹🏂🎸🍤
+# '🎽🏉🏭🏣🏴🎐🍵🐀🏧🐉🏴🏈🎆'
 
 # The encrypt and decrypt functions change the value in-place too
-a.decrypt() 
+decrypted = decrypt(encrypted, key)
 print(decrypted)
-# Hello World!
+# 'Hello, world!'
 ```
 
 _______________________
 
-## cryptmoji.Cryptmoji
-
-This is a class and its constructor is as follows:
-
-```python
-__init__(self, text: str, key: str = None)
-```
-
-The class constructor takes in a compulsory parameter i.e. the text to encrypt/decrypt. It also takes in an optional parameter (i.e. `key`) to increase the complexity of the encryption.
-
-```
-from cryptmoji import Cryptmoji
-
-tool = Cryptmoji(temp)
-```
+## cryptmoji
 
 ### encrypt()
 
-Encryption can be done using:
+Encryption can be done like this (without a key):
 
 ```python
-tool.encrypt()
-print(tool)
+from cryptmoji import encrypt
+
+text = "Hello, world!"
+encrypted = encrypt(text)
+print(encrypted)
+# 🌾🍛🍢🍢🍥🌕🌉🍭🍥🍨🍢🍚🌊
 ```
 
-apart from inplace encryption, the values are also returned.
+or like this (with a key):
 
 ```python
-encrypted = tool.decrypt()
+from cryptmoji import encrypt
+
+text = "Hello, world!"
+key = "random_key"
+encrypted = encrypt(text, key)
 print(encrypted)
+# 🎽🏉🏭🏣🏴🎐🍵🐀🏧🐉🏴🏈🎆
 ```
 
 ### decrypt()
 
-Decryption can be done using:
+Decryption can be done like this (without a key):
 
 ```python
-tool.decrypt()
-print(tool)
-```
+from cryptmoji import decrypt
 
-apart from inplace decryption, the values are also returned.
-
-```python
-decrypted = tool.decrypt()
+text = "🌾🍛🍢🍢🍥🌕🌉🍭🍥🍨🍢🍚🌊"
+decrypted = decrypt(encrypted)
 print(decrypted)
+# Hello, world!
 ```
 
+or like this (with a key):
+
+```python
+from cryptmoji import decrypt
+
+text = "🎽🏉🏭🏣🏴🎐🍵🐀🏧🐉🏴🏈🎆"
+key = "random_key"
+decrypted = decrypt(encrypted)
+print(decrypted)
+# Hello, world!
+```
