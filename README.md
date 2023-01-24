@@ -1,4 +1,4 @@
-# 🐱‍👤 Cryptmoji
+# 🥷 Cryptmoji
 
 A simple emoji-based encryption-decryption library.
 _______________________
@@ -10,6 +10,8 @@ pip install the library:
 ```sh
 pip install cryptmoji
 ```
+
+Check the [Documentation](https://siddhesh-agarwal.github.io/cryptmoji/)
 
 ## 📝 Usage
 
@@ -29,3 +31,4 @@ decrypted = decrypt(encrypted, key)
 print(decrypted)
 # 'Hello, world!'
 ```
+
