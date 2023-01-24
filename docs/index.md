@@ -1,4 +1,4 @@
-# 🐱‍👤 Cryptmoji
+# 🥷🏾 Cryptmoji
 
 A simple emoji-based encryption-decryption library.
 
