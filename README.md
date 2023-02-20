@@ -1,6 +1,8 @@
 # 🥷 Cryptmoji
 
 A simple emoji-based encryption-decryption library.
+
+![Downloads](https://static.pepy.tech/personalized-badge/cryptmoji?period=total&units=international_system&left_color=grey&right_color=green&left_text=Downloads)
 _______________________
 
 ## 📥 Installation
