@@ -23,12 +23,12 @@ text = "Hello, world!"
 key = "random_key" # makes the encryption stronger (optional)
 
 # The encrypt and decrypt functions return the value
-encrypted = encrypt(text, key)
+encrypted = encrypt(text, key=key)
 print(encrypted)
 # '🎽🏉🏭🏣🏴🎐🍵🐀🏧🐉🏴🏈🎆'
 
 # The encrypt and decrypt functions change the value in-place too
-decrypted = decrypt(encrypted, key)
+decrypted = decrypt(encrypted, key=key)
 print(decrypted)
 # 'Hello, world!'
 ```
@@ -57,7 +57,7 @@ from cryptmoji import encrypt
 
 text = "Hello, world!"
 key = "random_key"
-encrypted = encrypt(text, key)
+encrypted = encrypt(text, key=key)
 print(encrypted)
 # 🎽🏉🏭🏣🏴🎐🍵🐀🏧🐉🏴🏈🎆
 ```
@@ -82,7 +82,7 @@ from cryptmoji import decrypt
 
 text = "🎽🏉🏭🏣🏴🎐🍵🐀🏧🐉🏴🏈🎆"
 key = "random_key"
-decrypted = decrypt(encrypted)
+decrypted = decrypt(encrypted, key=key)
 print(decrypted)
 # Hello, world!
 ```

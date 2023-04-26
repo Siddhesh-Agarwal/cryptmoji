@@ -1,33 +1,33 @@
-from cryptmoji.data import EMOJIS
+from data import EMOJIS
 
 LENGTH = len(EMOJIS)
 
 
-def encrypt(text: str, key: str = None) -> str:
+def encrypt(text: str, *, key: str = None) -> str:
     """
     Encrypts a string to emojis.
-    
+
     Args
     ----
     text: str
         The string to encrypt
     key: str
         The string to use for increasing complexity of encryption
-    
+
     Returns
     -------
     encrypted: str
         The encrypted string
     """
-    if key is not None:
-        char_2_int = [ord(text[i]) + ord(key[i % len(key)]) for i in range(len(text))]
-    else:  # key is None
+    if key is None:
         char_2_int = [ord(text[i]) for i in range(len(text))]
+    else:  # key is not None
+        char_2_int = [ord(text[i]) + ord(key[i % len(key)]) for i in range(len(text))]
     text = [EMOJIS[i % LENGTH] for i in char_2_int]
     return "".join(text)
 
 
-def decrypt(text: str, key: str = None) -> str:
+def decrypt(text: str, *, key: str = None) -> str:
     """
     Decrypts a string from emojis.
 
@@ -37,7 +37,7 @@ def decrypt(text: str, key: str = None) -> str:
         The string to decrypt
     key: str
         The string used encryption
-    
+
     Returns
     -------
     encrypted: str
@@ -52,3 +52,11 @@ def decrypt(text: str, key: str = None) -> str:
         decrypted = [emojis_2_int[i] for i in range(len(emojis_2_int))]
     text = [chr(i) for i in decrypted]
     return "".join(text)
+
+if __name__ == "__main__":
+    text = "Hello World!"
+    encrypted = encrypt(text)
+    decrypted = decrypt(encrypted)
+    print(f"Text: {text}")
+    print(f"Encrypted: {encrypted}")
+    print(f"Decrypted: {decrypted}")
