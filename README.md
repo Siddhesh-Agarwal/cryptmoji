@@ -42,20 +42,14 @@ print(decrypted)
 
 ## Command line tool
 
-### Installation
-
-```sh
-pip install cryptmoji[cli]
-```
-
 ### Usage
 
 ```sh
-$ cryptmoji encrypt "Hello World"
-Key (optional):
+$ cryptmoji encrypt "Hello World" --key "test"
 🎿🏑🏸🏹🐁🍻🏑🐁🐄🏤🏪
 
-$ cryptmoji decrypt "🎿🏑🏸🏹🐁🍻🏑🐁🐄🏤🏪"
-Key (optional):
+$ cryptmoji decrypt "🎿🏑🏸🏹🐁🍻🏑🐁🐄🏤🏪" --key "test"
 Hello World
 ```
+
+> **NOTE**: key is an optional parameter. If not provided, the value defaults to `None`.

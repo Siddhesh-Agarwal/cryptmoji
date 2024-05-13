@@ -36,8 +36,6 @@ cryptmoji = "cryptmoji.cli:app"
 
 [tool.poetry.dependencies]
 python = ">=3.7.0,<4.0"
-
-[tool.poetry.group.cli.dependencies]
 typer = {extras = ["all"], version = "^0.12.3"}
 rich = "^13.7.1"
 
