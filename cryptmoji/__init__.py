@@ -1,4 +1,3 @@
 from cryptmoji.main import encrypt, decrypt
 from cryptmoji.data import EMOJIS
-
-__version__ = "2.1.0"
+from cryptmoji.version import __version__
