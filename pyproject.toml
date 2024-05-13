@@ -6,12 +6,13 @@ authors = ["Siddhesh Agarwal <siddhesh.agarwal@gmail.com>"]
 license = "MIT"
 readme = "./README.md"
 repository = "https://github.com/Siddhesh-Agarwal/cryptmoji"
-documentation = "https://siddhesh-agarwal.github.io/cryptmoji/"
+documentation = "https://github.com/Siddhesh-Agarwal/cryptmoji/wiki"
 keywords = ["encryption", "emoji", "cipher", "cryptography", "cryptmoji"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "Intended Audience :: Education",
+    "Intended Audience :: Information Technology",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -22,10 +23,10 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation",
     "Topic :: Security",
     "Topic :: Security :: Cryptography",
-    "Topic :: Software Development :: Libraries",
-    "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Utilities",
     "Typing :: Typed",
 ]
