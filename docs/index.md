@@ -6,10 +6,16 @@ _______________________
 
 ## 📥 Installation
 
-pip install the library:
+You can use the [pip](https://pypi.org/project/pip/) package manager to install the library.
 
-```bash
+```sh
 pip install cryptmoji
+```
+
+or use [poetry](https://python-poetry.org/):
+
+```sh
+poetry add cryptmoji
 ```
 
 _______________________
@@ -85,4 +91,32 @@ key = "random_key"
 decrypted = decrypt(encrypted, key=key)
 print(decrypted)
 # Hello, world!
+```
+
+_______________________
+
+## Command line tool
+
+### Installation
+
+```sh
+pip install cryptmoji[cli]
+```
+
+### Usage
+
+To encrypt:
+
+```sh
+$ cryptmoji encrypt "Hello World"
+Key (optional):
+🌾🍛🍢🍢🍥🌕🌉🍭🍥🍨🍢🍚🌊
+```
+
+To decrypt:
+
+```sh
+$ cryptmoji decrypt "🌾🍛🍢🍢🍥🌕🌉🍭🍥🍨🍢🍚🌊"
+Key (optional):
+Hello World
 ```

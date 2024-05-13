@@ -16,7 +16,6 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -31,8 +30,15 @@ classifiers = [
     "Typing :: Typed",
 ]
 
+[tool.poetry.scripts]
+cryptmoji = "cryptmoji.cli:app"
+
 [tool.poetry.dependencies]
-python = "^3.6"
+python = ">=3.7.0,<4.0"
+
+[tool.poetry.group.cli.dependencies]
+typer = {extras = ["all"], version = "^0.12.3"}
+rich = "^13.7.1"
 
 [build-system]
 requires = ["poetry-core>=2.0.0"]
