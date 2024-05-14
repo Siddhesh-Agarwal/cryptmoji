@@ -1,10 +1,10 @@
-from cryptmoji import Cryptmoji
+from cryptmoji import encrypt, decrypt
 
 if __name__ == "__main__":
     text = "Hello World!"
     key = "random_key"
-    a = Cryptmoji(text, key)
-    encrypted = a.encrypt()
-    print(encrypted)
-    decrypted = a.decrypt()
-    print(decrypted)
+    encrypted = encrypt(text, key=key)
+    print(f"{encrypted=}")
+    decrypted = decrypt(encrypted, key=key)
+    print(f"{decrypted=}")
+    assert decrypted == text

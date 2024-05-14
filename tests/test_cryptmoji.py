@@ -1,18 +1,33 @@
-from cryptmoji import __version__, encrypt, decrypt
+from typing import Union
+from cryptmoji import encrypt, decrypt
 
 
-def test_version():
-    assert __version__ == "2.1.0", "Version is not 2.1.0"
+def test_general(text: str, key: Union[str, None] = None):
+    return decrypt(encrypt(text, key=key), key=key) == text
 
 
 def test_1():
-    assert "Hello, World!" == decrypt(encrypt("Hello, World!")), "Encryption and decryption do not work as expected"
+    text = "Hello, World!"
+    assert test_general(text), "Encryption and decryption do not work as expected"
 
 
 def test_2():
-    assert "Hello, World!" == decrypt(encrypt("Hello, World!", key="key"), key="key"), "Encryption and decryption do not work as expected"
+    key = "test_key"
+    text = "Hello, World!"
+    assert test_general(
+        text, key=key
+    ), "Encryption and decryption do not work as expected"
+
+
+def test_3():
+    key = "53cr3t_k3y"
+    text = "Hello, World!"
+    assert test_general(
+        text, key=key
+    ), "Encryption and decryption do not work as expected"
+
 
 if __name__ == "__main__":
-    test_version()
     test_1()
     test_2()
+    test_3()
