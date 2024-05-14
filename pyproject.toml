@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cryptmoji"
-version = "2.1.0"
+version = "2.1.1"
 description = "Encrypt Text using emojis!"
 authors = ["Siddhesh Agarwal <siddhesh.agarwal@gmail.com>"]
 license = "MIT"
