@@ -1,5 +1,6 @@
+from typing import Annotated
 from rich.console import Console
-from typer import Typer, prompt
+from typer import Typer, prompt, Option
 
 from cryptmoji.main import decrypt, encrypt
 from cryptmoji.version import __version__
@@ -22,11 +23,13 @@ def cli_decrypt(text: str):
     console.print(decrypt(text, key=key))
 
 
-@app.command("--version")
-def cli_version():
+def cli_version(
+    show_version: Annotated[bool, Option("--version", "-v", is_eager=True)]
+):
     """Prints the version of the library."""
     version = ".".join(str(i) for i in __version__)
-    console.print(f"cryptmoji v{version}")
+    if show_version:
+        console.print(f"cryptmoji v{version}")
 
 
 if __name__ == "__main__":
