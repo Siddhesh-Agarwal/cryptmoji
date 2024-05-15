@@ -20,13 +20,13 @@ def encrypt(text: str, *, key: Union[str, None] = None) -> str:
     encrypted: str
         The encrypted string
     """
-    iterator = range(len(text))
-    if key is None:
-        char_2_int = [ord(text[i]) for i in iterator]
-    else:  # key is not None
-        char_2_int = [ord(text[i]) + ord(key[i % len(key)]) for i in iterator]
-    char_arr = [EMOJIS[i % LENGTH] for i in char_2_int]
-    return "".join(char_arr)
+    if key:
+        key_len = len(key)
+        iterator = range(len(text))
+        char_2_int = map(lambda x: ord(text[x]) + ord(key[x % key_len]), iterator)
+    else:
+        char_2_int = map(ord, text)
+    return "".join(map(lambda x: EMOJIS[x % LENGTH], char_2_int))
 
 
 def decrypt(text: str, *, key: Union[str, None] = None) -> str:
@@ -47,9 +47,12 @@ def decrypt(text: str, *, key: Union[str, None] = None) -> str:
     """
     emojis_2_int = [EMOJIS.index(i) for i in text]
     iterator = range(len(emojis_2_int))
-    if key is not None:
-        decrypted = [emojis_2_int[i] - ord(key[i % len(key)]) for i in iterator]
+    if key:
+        key_len = len(key)
+        decrypted = map(
+            lambda x: (emojis_2_int[x] - ord(key[x % key_len]) + LENGTH) % LENGTH,
+            iterator,
+        )
     else:
-        decrypted = [emojis_2_int[i] for i in iterator]
-    char_arr = [chr(i) for i in decrypted]
-    return "".join(char_arr)
+        decrypted = map(lambda x: emojis_2_int[x], iterator)
+    return "".join(map(chr, decrypted))
